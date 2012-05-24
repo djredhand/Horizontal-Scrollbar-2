@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Tiny Scrollbar: A lightweight jQuery plugin</title>
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.tinyscrollbar.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#scrollbar2').tinyscrollbar({ axis: 'x' });	
+		});
+	</script>	
+<style>
+#scrollbar2 {
+width: 251px;
+margin: 20px 0 10px;
+}
+#scrollbar2 .scrollbar {
+background: 
+transparent url(images/bg-scrollbar-track-x.png) no-repeat 0 0;
+position: relative;
+margin: 0 0 5px;
+clear: both;
+height: 15px;
+}
+#scrollbar2 .viewport {
+width: 236px;
+height: 125px;
+overflow: hidden;
+position: relative;
+}
+#scrollbar2 .overview {
+list-style: none;
+width: 2416px;
+padding: 0;
+margin: 0;
+position: absolute;
+left: 0;
+top: 0;
+}
+#scrollbar2 .thumb {
+background: 
+transparent url(images/bg-scrollbar-thumb-x.png) no-repeat 100% 50%;
+height: 25px;
+cursor: pointer;
+overflow: hidden;
+position: absolute;
+left: 0;
+top: -5px;
+}
+#scrollbar2 .track {
+background: 
+transparent url(images/bg-scrollbar-trackend-x.png) no-repeat 100% 0;
+width: 100%;
+height: 15px;
+position: relative;
+}
+#scrollbar2 .thumb .end {
+background: 
+transparent url(images/bg-scrollbar-thumb-x.png) no-repeat 0 50%;
+overflow: hidden;
+height: 25px;
+width: 5px;
+}
+ul li {
+	display:inline;
+	padding:0 8px;
+	list-style:none;
+}
+</style>
+</head>
+<body>
+	<div id="scrollbar2">
+	
+		<div class="viewport">
+			<div class="overview" style="left: 0px; ">
+				<ul id="scroll_indicator">
+					<li><img src="http://baijs.nl/tinyscrollbar/images/picture7.jpg" alt="image 2"></li>
+					<li><img src="http://baijs.nl/tinyscrollbar/images/picture5.jpg" alt="image 2"></li>
+					<li><img src="http://baijs.nl/tinyscrollbar/images/picture6.jpg" alt="image 2"></li>
+					<li><img src="http://baijs.nl/tinyscrollbar/images/picture4.jpg" alt="image 2"></li>
+					<li><img src="http://baijs.nl/tinyscrollbar/images/picture3.jpg" alt="image 2"></li>
+					<li><img src="http://baijs.nl/tinyscrollbar/images/picture2.jpg" alt="image 2"></li>
+					<li><img src="http://baijs.nl/tinyscrollbar/images/picture2.jpg" alt="image 2"></li>
+					<li><img src="http://baijs.nl/tinyscrollbar/images/picture2.jpg" alt="image 2"></li>
+					<li><img src="http://baijs.nl/tinyscrollbar/images/picture2.jpg" alt="image 2"></li>
+				</ul>
+			</div><!--end #overview-->
+		</div><!--end #viewport-->
+		
+		<div class="scrollbar" style="width: 236px; ">
+			<div class="track" style="width: 236px; ">
+				<div class="thumb" style="width: 39.33333333333333px; left: 0px; ">
+					<div class="end"></div>
+				</div><!--end #thumb-->
+			</div><!--end #track-->
+		</div><!--end #scrollbar-->
+		
+	</div><!--end #scrollbar2-->
+	
+</body>
+</html>
